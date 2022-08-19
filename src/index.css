@@ -1,0 +1,278 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+}
+
+#link {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+}
+
+/************************* NAVBAR ************************/
+nav {
+  height: 100vh;
+  background-color: rgb(26 88 98);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav .logo-container,
+nav .controls-container {
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .logo-container img {
+  width: 40px;
+}
+
+nav .icon {
+  color: #fff;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+nav .icon svg {
+  font-size: 25px;
+}
+
+/************************* DASHBOARD ************************/
+
+.dashboard {
+  padding: 30px;
+  width: 100%;
+}
+
+.dashboard .ticket-container {
+  height: 80vh;
+  overflow-y: scroll;
+  border-radius: 15px !important;
+  position: relative;
+  display: block;
+  padding: 15px 12px;
+  color: #000;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0 2px 48px 0 rgb(0 0 0 / 8%);
+  box-shadow: 0 2px 48px 0 rgb(0 0 0 / 8%);
+  margin-top: 20px;
+}
+
+/************************* TIECKETCARD ************************/
+
+.ticket-card {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.ticket-card #link {
+  display: flex;
+  width: 100%;
+}
+
+.ticket-card #link > * {
+  background-color: rgb(221, 221, 221);
+  margin: 2px;
+  padding: 15px 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.ticket-card .ticket-color {
+  width: 15px !important;
+  margin: 2px;
+  padding: 10px !important;
+}
+
+.ticket-card .avatar-container {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+}
+
+.ticket-card .img-container {
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.ticket-card .img-container img {
+  width: 100%;
+}
+
+.ticket-card .status-display {
+  display: flex;
+  justify-content: center;
+}
+
+.ticket-card .priority-display {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.ticket-card .priority-display .star-container {
+  display: flex;
+}
+
+.ticket-card .priority-display .star-container h3 {
+  margin: 7px;
+  padding: 0;
+}
+
+.ticket-card .progress-display {
+  min-width: 200px;
+}
+
+.ticket-card .progress-bar {
+  width: 100%;
+  height: 15px;
+  background-color: rgb(163 163 163);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.ticket-card .progress-bar .progress-indicator {
+  background-color: rgb(55 173 54);
+  height: 100%;
+}
+
+.ticket-card .delete-block {
+  background-color: rgb(211, 211, 211);
+  width: 58px;
+  margin: 2px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ticket-card .delete-block .delete-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: rgb(233 80 21);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+}
+
+/************************* TICKET PAGE ************************/
+
+.ticket {
+  padding: 30px;
+  width: 100%;
+}
+
+.ticket .heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ticket .ticket-container {
+  display: flex;
+  justify-content: center;
+}
+.ticket form {
+  display: flex;
+  border: 1px solid #d9d9d9;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.ticket form section {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 500px;
+}
+
+.ticket form label {
+  margin: 20px 0 0 0;
+}
+
+.ticket form input,
+select {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1.5px solid rgb(218, 218, 218);
+  margin: 5px;
+}
+
+.ticket form .multiple-input-container {
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+
+.ticket .img-preview {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.ticket .img-preview img {
+  width: 100%;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(194, 167, 15);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 2px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.ticket-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ticket-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(235 126 14 / 78%);
+}
+
+.ticket-container::-webkit-scrollbar-thumb {
+  background-color: #fba3a3;
+  outline: 1px solid #f18888;
+  border-radius: 15px;
+}
